@@ -76,7 +76,7 @@ define make-xc-target
 					-tags "${GOTAGS}"
 		@echo "Compiled $1/$2 with ${GOVERSION}"
 		@ls -la "pkg/${1}_${2}/${NAME}${3}"
-		zip "${NAME}{$3}-{$1}-${2}.zip" "pkg/${1}_${2}/${NAME}${3}"
+		zip "${NAME}${3}-${1}-${2}.zip" "pkg/${1}_${2}/${NAME}${3}"
   endif
   .PHONY: $1/$2
 
