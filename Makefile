@@ -74,6 +74,8 @@ define make-xc-target
 					-o="pkg/${1}_${2}/${NAME}${3}" \
 					-ldflags "${LD_FLAGS}" \
 					-tags "${GOTAGS}"
+		@echo "Compiled $1/$2 with ${GOVERSION}"
+		@ls -laR pkg/
   endif
   .PHONY: $1/$2
 
